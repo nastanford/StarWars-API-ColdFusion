@@ -9,5 +9,4 @@
   <title>#request.PageName# | #request.applicationName#</title>
   </head>
   <body>
-
 </cfoutput>

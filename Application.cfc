@@ -16,6 +16,7 @@ component {
     function onRequestStart( string targetPage ) {
         request.ApplicationName="Star Wars API ColdFusion";
         request.PageName="";
+        request.swlist="planets,spaceships,vehicles,people,films,species";
     }
 
     function onRequest( string targetPage ) {
