@@ -1,0 +1,23 @@
+{
+  "name": "starwars-api-coldfusion",
+  "version": "1.0.0",
+  "description": "Creating example code for others to use. Using the free Star Wars API and ColdFusion.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nastanford/StarWars-API-ColdFusion.git"
+  },
+  "keywords": [],
+  "author": "Nathan Stanford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nastanford/StarWars-API-ColdFusion/issues"
+  },
+  "homepage": "https://github.com/nastanford/StarWars-API-ColdFusion#readme",
+  "dependencies": {
+    "tailwindcss": "^1.1.3"
+  }
+}
