@@ -10,7 +10,7 @@
     <cfinclude template="view/#url.sw#.cfm">
   </cfif>
 <cfelse>
-  Home Page  
+  
 </cfif>
 
 

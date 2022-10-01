@@ -1,5 +1,4 @@
 the people
 
-<cfhttp url="https://swapi.co/api/people/1/" result="myData">
-
-  <cfdump  var="#myData.FileContent#">
+<cfhttp url="https://swapi.dev/api/people/" result="myData">
+<cfdump  var="#myData.FileContent#">

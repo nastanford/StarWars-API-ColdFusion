@@ -14,13 +14,20 @@ component {
     // the target page is passed in for reference,
     // but you are not required to include it
     function onRequestStart( string targetPage ) {
-        request.ApplicationName="Star Wars API ColdFusion";
-        request.PageName="";
-        request.swlist="planets,spaceships,vehicles,people,films,species";
+        request.ApplicationName = "Star Wars API ColdFusion";
+        request.PageName        = "";
+        request.swlist          = "planets,starships,vehicles,people,films,species";
+        request.filmsApi        = "https://swapi.dev/api/films/";
+        request.peopleApi       = "https://swapi.dev/api/people/";
+        request.planetsApi      = "https://swapi.dev/api/planets/";
+        request.speciesApi      = "https://swapi.dev/api/species/";
+        request.starshipsApi    = "https://swapi.dev/api/starships/";
+        request.vehiclesApi     = "https://swapi.dev/api/vehicles/";
     }
 
     function onRequest( string targetPage ) {
         include arguments.targetPage;
+
     }
 
     function onRequestEnd() {

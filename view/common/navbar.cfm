@@ -1,23 +1,29 @@
- <!-- NAVBAR COMPONENT -->
- <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <span class="font-bold text-xl">Star Wars API ColdFusion</span>
-  </div>
-<!--- Planets, Spaceships, Vehicles, People, Films and Species --->
-  <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
-    <div class="text-sm sm:flex-grow">
-      <a href="index.cfm"               class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
 
-      <cfscript>
-        for(page in request.swlist) {
-          WriteOutput('<a href="index.cfm?sw=#page#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">#reReplace(page,"(^[a-z]|\s+[a-z])","\U\1","ALL")#</a>');
-        }
-      </cfscript>
+<cfoutput>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-secondary"">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white fw-bold" href="/StarWars-API-ColdFusion/">Star Wars API ColdFusion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="##navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a href="/StarWars-API-ColdFusion/" role="button">    
+            <button type="button" class="btn btn btn-primary position-relative">
+              <i class="fa-duotone fa-house-chimney"></i> Home
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+            </button></a>
+          <cfloop list="#request.swlist#" index="name">
+            <a href="index.cfm?sw=#name#" role="button">    
+            <button type="button" class="btn btn btn-primary position-relative">
+              <i class="fa-duotone fa-house-chimney"></i> #reReplace(name,"(^[a-z]|\s+[a-z])","\U\1","ALL")#
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+            </button></a>
+          </cfloop>
+        </li>   
+      </ul>
     </div>
-    <div>
-    <!--- <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 md:mt-0">Login</a> --->
-  </div>
   </div>
 </nav>
-
-
+</cfoutput>
